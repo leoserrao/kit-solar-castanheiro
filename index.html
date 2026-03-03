@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Kit Solar Castanheiro - Tecnologia social inovadora da Amazônia para autonomia energética de comunidades extrativistas.">
+<title>Kit Solar Castanheiro | Tecnologia Social da Amazônia</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f4f7f6;
+color:#2c2c2c;
+line-height:1.7;
+}
+
+/* HERO */
+.hero-carousel{
+position:relative;
+height:90vh;
+overflow:hidden;
+}
+
+.hero-carousel img{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+display:none;
+transition:opacity 1s ease-in-out, transform 8s ease;
+}
+
+.hero-carousel img.active{
+display:block;
+animation: zoomHero 8s ease-in-out infinite alternate;
+}
+
+@keyframes zoomHero{
+from{transform:scale(1)}
+to{transform:scale(1.08)}
+}
+
+.hero-overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero-overlay h1{
+font-size:52px;
+margin-bottom:20px;
+font-weight:700;
+letter-spacing:1px;
+}
+
+.hero-overlay p{
+max-width:800px;
+font-size:20px;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 32px;
+border-radius:50px;
+font-weight:600;
+text-decoration:none;
+transition:all 0.3s ease;
+}
+
+.btn-primary{
+background:#facc15;
+color:#111;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+.btn-primary:hover{
+background:#fde047;
+transform:translateY(-3px);
+box-shadow:0 12px 25px rgba(0,0,0,0.3);
+}
+
+/* SEÇÕES */
+section{
+padding:100px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+h2{
+text-align:center;
+font-size:36px;
+margin-bottom:60px;
+color:#064e3b;
+position:relative;
+}
+
+h2::after{
+content:"";
+width:60px;
+height:4px;
+background:#059669;
+display:block;
+margin:15px auto 0;
+border-radius:2px;
+}
+
+/* CARDS */
+.cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:40px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,0.08);
+transition:all 0.4s ease;
+max-width:350px;
+flex:1 1 320px;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 50px rgba(0,0,0,0.15);
+}
+
+/* IMAGENS DOS PROTÓTIPOS */
+.card img{
+width:100%;
+border-radius:15px;
+margin-bottom:20px;
+transition:transform 0.6s ease, filter 0.6s ease;
+}
+
+.card:hover img{
+transform:scale(1.08);
+filter:brightness(1.05);
+}
+
+/* CURRÍCULOS */
+.profile-section{
+max-width:1000px;
+margin:auto;
+display:flex;
+flex-wrap:wrap;
+gap:50px;
+align-items:center;
+justify-content:center;
+}
+
+.profile-section img{
+width:100%;
+max-width:350px;
+border-radius:20px;
+box-shadow:0 15px 35px rgba(0,0,0,0.15);
+transition:transform 0.4s ease;
+}
+
+.profile-section img:hover{
+transform:scale(1.03);
+}
+
+.profile-text{
+flex:1;
+min-width:280px;
+font-size:18px;
+text-align:justify;
+}
+
+/* CONTATO */
+#contato{
+text-align:center;
+background:#ecfdf5;
+border-radius:20px;
+padding:80px 30px;
+}
+
+footer{
+background:#111827;
+color:white;
+text-align:center;
+padding:50px 20px;
+margin-top:80px;
+font-size:14px;
+letter-spacing:1px;
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+
+.hero-overlay h1{
+font-size:32px;
+}
+
+.hero-overlay p{
+font-size:16px;
+}
+
+.hero-carousel{
+height:70vh;
+}
+
+}
+
+/* SEÇÃO PRÊMIO */
+.premio-section{
+background:#f0fdf4;
+border-radius:25px;
+padding:100px 40px;
+}
+
+.premio-text{
+max-width:1000px;
+margin:auto;
+font-size:18px;
+text-align:justify;
+line-height:1.8;
+margin-bottom:50px;
+}
+
+.premio-img{
+display:flex;
+justify-content:center;
+margin:50px 0;
+}
+
+.premio-img img{
+max-width:500px;
+width:100%;
+border-radius:20px;
+box-shadow:0 20px 50px rgba(0,0,0,0.15);
+transition:transform 0.5s ease;
+}
+
+.premio-img img:hover{
+transform:scale(1.04);
+}
+
+.premio-table{
+width:100%;
+border-collapse:collapse;
+margin-top:40px;
+font-size:16px;
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+.premio-table th{
+background:#064e3b;
+color:white;
+padding:15px;
+text-align:left;
+}
+
+.premio-table td{
+padding:14px;
+border-bottom:1px solid #e5e7eb;
+}
+
+.premio-table tr:hover{
+background:#f9fafb;
+}
+
+.premio-table a{
+color:#047857;
+font-weight:500;
+text-decoration:none;
+}
+
+.premio-table a:hover{
+text-decoration:underline;
+}
+</style>
+</head>
+<body>
+
+<!-- CARROSSEL NO TOPO COM HERO SOBREPOSTO -->
+<div class="hero-carousel">
+<img src="img/figura1.jpg" class="active" alt="Equipe do Projeto">
+<img src="img/figura2.jpg" alt="Reconhecimento na mídia">
+<img src="img/figura3.jpg" alt="Premiação Nacional">
+
+<div class="hero-overlay">
+<h1>Kit Solar Castanheiro</h1>
+<p>Tecnologia social desenvolvida na Amazônia para promover autonomia energética, sustentabilidade e justiça socioambiental às comunidades extrativistas.</p>
+<a href="#contato" class="btn btn-primary">Apoiar o Projeto</a>
+</div>
+</div>
+
+<section>
+<h2>Resumo do Projeto</h2>
+<div style="max-width:900px;margin:auto;font-size:18px;text-align:justify;">
+<p>O projeto <strong>“Kit Solar Castanheiro: aperfeiçoamento de uma alternativa inovadora para melhoria da qualidade de vida de extrativistas”</strong> tem como objetivo desenvolver e aprimorar uma solução tecnológica sustentável baseada em energia solar, voltada ao atendimento de demandas básicas de comunidades extrativistas da Amazônia, especialmente aquelas vinculadas à cadeia produtiva da castanha-da-Amazônia.</p>
+
+<p>A proposta integra ciência, tecnologia e inovação como ferramentas estratégicas para o enfrentamento das mudanças climáticas e a promoção da justiça socioambiental, oferecendo uma alternativa limpa, acessível e de baixo custo para a geração de energia em áreas com difícil acesso à rede elétrica convencional.</p>
+
+<p>O kit solar foi concebido para apoiar atividades produtivas, domésticas e de organização comunitária, contribuindo para a redução da vulnerabilidade socioeconômica e para o fortalecimento da autonomia das populações tradicionais. Além do caráter tecnológico, o projeto possui forte dimensão social e ambiental, ao estimular práticas sustentáveis, reduzir a dependência de combustíveis fósseis e valorizar os modos de vida extrativistas.</p>
+
+<p>Dessa forma, o Kit Solar Castanheiro apresenta-se como uma iniciativa replicável, alinhada às políticas públicas de enfrentamento às mudanças climáticas e ao desenvolvimento sustentável da Amazônia. O êxito do projeto reflete tanto o protagonismo da jovem pesquisadora Manuelle da Costa Pereira quanto a atuação acadêmica e institucional do professor Dr. Diego Armando Silva da Silva, cuja trajetória consolidada em pesquisa, inovação e extensão tem contribuído de maneira decisiva para a formação de talentos e para o fortalecimento da ciência no Estado do Amapá.</p>
+</div>
+</section>
+
+<section>
+<h2>Evolução Tecnológica</h2>
+
+<div class="cards">
+
+<!-- PROTÓTIPO 1 -->
+<div class="card">
+<img src="img/prototipo1.jpg" alt="Protótipo 1 - Prova de Conceito" style="width:100%;border-radius:15px;margin-bottom:20px;">
+<h3>Protótipo 1 – Prova de Conceito</h3>
+<p>
+Primeira geração do Kit Solar Castanheiro, desenvolvida para validar a viabilidade do uso de energia solar no contexto do extrativismo florestal. 
+A estrutura foi inicialmente acondicionada em bambona reutilizada de 50 litros, conectando a tecnologia à cultura material dos próprios extrativistas.
+</p>
+<p>
+Essa fase permitiu identificar limitações relacionadas ao peso, ergonomia, segurança elétrica e logística de transporte em áreas de difícil acesso. 
+Sua apresentação pública em feira científica revelou críticas importantes que impulsionaram o amadurecimento técnico do projeto.
+</p>
+</div>
+
+<!-- PROTÓTIPO 2 -->
+<div class="card">
+<img src="img/prototipo2.jpg" alt="Protótipo 2 - Redesign Estrutural" style="width:100%;border-radius:15px;margin-bottom:20px;">
+<h3>Protótipo 2 – Redesign e Validação em Campo</h3>
+<p>
+A segunda geração incorporou melhorias estruturais significativas, com redução do volume do recipiente e reorganização interna dos componentes elétricos, tornando o sistema mais compacto e manejável.
+</p>
+<p>
+Foram realizados testes em ambiente real de uso nas comunidades extrativistas do Vale do Jari, avaliando desempenho energético, resistência mecânica, segurança operacional e aceitabilidade social.
+</p>
+<p>
+Os resultados forneceram parâmetros técnicos essenciais para o refinamento da solução.
+</p>
+</div>
+
+<!-- PROTÓTIPO 3 -->
+<div class="card">
+<img src="img/prototipo3.jpg" alt="Protótipo 3 - Sistema Modular" style="width:100%;border-radius:15px;margin-bottom:20px;">
+<h3>Protótipo 3 – Sistema Modular e Consolidação Tecnológica</h3>
+<p>
+A versão atual representa um salto qualitativo no desenvolvimento do projeto. 
+O sistema tornou-se modular, com melhor distribuição de carga, separação física entre geração, armazenamento e uso da energia.
+</p>
+<p>
+Incorpora baterias de maior segurança operacional, redesign estrutural e ergonomia adequada ao transporte em trilhas florestais.
+</p>
+<p>
+Esta versão fundamenta o pedido de registro como Modelo de Utilidade junto ao INPI (Processo nº BR 20 2024 006695 8), consolidando a maturidade tecnológica do Kit Solar Castanheiro.
+</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Currículo do Orientador</h2>
+<div class="profile-section">
+
+<div style="flex:1;min-width:280px;text-align:center;">
+<img src="img/orientador.jpg" alt="Dr. Diego Armando Silva da Silva" style="width:100%;max-width:350px;border-radius:20px;box-shadow:0 15px 35px rgba(0,0,0,0.15);object-fit:cover;">
+</div>
+
+<div class="profile-text">
+<p><strong>Dr. Diego Armando Silva da Silva</strong> é Doutor em Ciências Florestais e professor do Instituto Federal do Amapá (IFAP) – Campus Laranjal do Jari, onde atua nos cursos de Engenharia Florestal e Técnico em Florestas, além de colaborar em programas de pós-graduação.</p>
+
+<p>É líder do Grupo de Pesquisa Centro de Estudos em Ecologia e Manejo na Amazônia (CEEMA), com ampla atuação em pesquisa aplicada, inovação tecnológica e extensão universitária. Possui trajetória reconhecida no desenvolvimento de tecnologias sociais e no manejo florestal sustentável, tendo recebido premiações institucionais, como os títulos de Pesquisador Inovador e Doutor Empreendedor do Estado do Amapá.</p>
+
+<p>Ao longo de sua carreira, coordenou expedições científicas em áreas remotas da Amazônia, incluindo a participação no registro da árvore mais alta já documentada na região. Sua atuação acadêmica integra ensino, pesquisa e extensão, contribuindo de forma significativa para a formação de recursos humanos qualificados e para o fortalecimento da ciência produzida no Estado do Amapá.</p>
+
+<p><strong>Currículo Lattes:</strong><br>
+<a href="http://lattes.cnpq.br/7306351915828921" target="_blank">http://lattes.cnpq.br/7306351915828921</a></p>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Currículo da Aluna</h2>
+<div class="profile-section">
+
+<div style="flex:1;min-width:280px;text-align:center;">
+<img src="img/aluna.jpg" alt="Manuelle da Costa Pereira" style="width:100%;max-width:350px;border-radius:20px;box-shadow:0 15px 35px rgba(0,0,0,0.15);object-fit:cover;">
+</div>
+
+<div class="profile-text">
+<p><strong>Manuelle da Costa Pereira</strong> é estudante pesquisadora vinculada ao Instituto Federal do Amapá (IFAP) – Campus Laranjal do Jari, com atuação destacada em projetos de iniciação científica e desenvolvimento de tecnologias sociais voltadas à sustentabilidade na Amazônia.</p>
+
+<p>Participou ativamente da concepção, desenvolvimento e aperfeiçoamento do <strong>Kit Solar Castanheiro</strong>, contribuindo para a estruturação técnica do protótipo, testes de viabilidade e validação da proposta junto às comunidades extrativistas. Sua atuação evidencia protagonismo juvenil na pesquisa aplicada e compromisso com soluções inovadoras de impacto socioambiental.</p>
+
+<p>Ao longo de sua trajetória acadêmica, tem se dedicado à integração entre ciência, tecnologia e responsabilidade social, com foco na melhoria da qualidade de vida de populações tradicionais e no fortalecimento do desenvolvimento sustentável regional.</p>
+
+<p>Seu desempenho no projeto reflete engajamento científico, liderança e capacidade de inovação, consolidando sua formação como jovem pesquisadora comprometida com os desafios ambientais e sociais da Amazônia.</p>
+</div>
+
+</div>
+</section>
+
+<section class="premio-section">
+<h2>Prêmio Jovem Cientista 2025</h2>
+
+<div class="premio-text">
+<p>
+O Prêmio Jovem Cientista 2025, promovido pelo CNPq e pela Fundação Roberto Marinho, reconheceu iniciativas científicas capazes de responder, de forma aplicada e territorializada, aos desafios impostos pelas mudanças climáticas.
+</p>
+
+<p>
+Entre os projetos premiados, destacou-se nacionalmente o <strong>Kit Solar Castanheiro</strong>, desenvolvido no âmbito do Instituto Federal do Amapá (IFAP), com apoio da FAPEAP, por apresentar uma solução tecnológica simples, sustentável e alinhada às realidades do extrativismo amazônico.
+</p>
+
+<p>
+A conquista do 1º lugar pela estudante Manuelle da Costa Pereira consolidou o reconhecimento da ciência produzida na Amazônia como referência nacional em inovação climática e tecnologia social.
+</p>
+
+<p>
+A repercussão midiática nacional e regional evidenciou o potencial transformador da iniciativa, funcionando como selo público de validação científica, social e territorial.
+</p>
+</div>
+
+<div class="premio-img">
+<img src="img/premio.jpg" alt="Premiação Jovem Cientista 2025">
+</div>
+
+<table class="premio-table">
+<thead>
+<tr>
+<th>Âmbito</th>
+<th>Veículo / Fonte</th>
+<th>Título / Destaque</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Nacional</td>
+<td>CNPq / Fundação Roberto Marinho</td>
+<td>Resultado oficial – Prêmio Jovem Cientista 2025</td>
+<td><a href="https://jovemcientista.cnpq.br/projeto/premio-jovem-cientista#resultado" target="_blank">Acessar</a></td>
+</tr>
+
+<tr>
+<td>Nacional</td>
+<td>O Globo</td>
+<td>Prêmio Jovem Cientista anuncia os vencedores</td>
+<td><a href="https://historia.globo.com/historia-grupo-globo/noticias/noticia/conheca-os-vencedores-do-30o-premio-jovem-cientista.ghtml" target="_blank">Acessar</a></td>
+</tr>
+
+<tr>
+<td>Nacional</td>
+<td>Valor Econômico</td>
+<td>Destaque para soluções climáticas</td>
+<td><a href="https://valor.globo.com/brasil/noticia/2025/11/26/premio-jovem-cientista-anuncia-vencedores-com-destaque-para-projetos-de-enfrentamento-as-mudancas-climaticas.ghtml" target="_blank">Acessar</a></td>
+</tr>
+
+<tr>
+<td>Regional</td>
+<td>G1 Amapá</td>
+<td>Estudante do Amapá vence prêmio</td>
+<td><a href="https://g1.globo.com/ap/amapa/noticia/2025/11/26/estudante-do-amapa-vence-premio-jovem-cientista-com-kit-solar-portatil-para-castanheiros.ghtml" target="_blank">Acessar</a></td>
+</tr>
+
+<tr>
+<td>Regional</td>
+<td>JB News</td>
+<td>Estudante do IFAP conquista 1º lugar</td>
+<td><a href="https://jbnews.com.br/estudante-do-ifap-conquista-1o-lugar-no-premio-jovem-cientista/" target="_blank">Acessar</a></td>
+</tr>
+
+</tbody>
+</table>
+
+</section>
+
+<section id="contato" style="text-align:center">
+<h2>Parcerias e Investimentos</h2>
+<p>Entre em contato para apoiar ou implementar o projeto.</p>
+<a href="mailto:contato@kitsolarcastanheiro.com" class="btn btn-primary">Entrar em Contato</a>
+</section>
+
+<footer>
+<p>© 2026 Kit Solar Castanheiro | Tecnologia Social da Amazônia</p>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+let slideIndex = 0;
+const slides = document.querySelectorAll('.hero-carousel img');
+
+function showSlide(index){
+slides.forEach(slide => slide.classList.remove('active'));
+slides[index].classList.add('active');
+}
+
+function nextSlide(){
+slideIndex = (slideIndex + 1) % slides.length;
+showSlide(slideIndex);
+}
+
+setInterval(nextSlide, 5000);
+});
+</script>
+
+</body>
+</html>
